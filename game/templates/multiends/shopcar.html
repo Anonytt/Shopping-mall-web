@@ -24,7 +24,7 @@
             <div class="fl">
                 <ul>
                     <li>购物欢迎您！ </li>
-                    <li>
+                    <li id="shopcar">
                         <a href="#">请登录</a>
                         <a href="#" class="style-red">免费注册</a>
                     </li>
@@ -262,8 +262,8 @@
                 <dl class="mod_help_item mod_help_app">
                     <dt>帮助中心</dt>
                     <dd>
-                        <img src="http://47.94.12.24:8000/static/image/scimage/upload/erweima.png" alt="">
-                        <p>购物客户端</p>
+                    <img src="http://47.94.12.24:8000/static/image/scimage/upload/erweima.png" alt="">
+                    <p>购物客户端</p>
                     </dd>
                 </dl>
             </div>
@@ -271,14 +271,35 @@
             <!-- mod_copyright  -->
             <div class="mod_copyright">
                 <p class="mod_copyright_links">
-                    关于我们 | 联系我们 | 联系客服 | 商家入驻 | 营销中心 | 手机购物 | 友情链接 | 销售联盟 | 购物社区 | 购物公益 | English Site | Contact U
+                关于我们 | 联系我们 | 联系客服 | 商家入驻 | 营销中心 | 手机购物 | 友情链接 | 销售联盟 | 购物社区 | 购物公益 | English Site | Contact U
                 </p>
                 <p class="mod_copyright_info">
-                    地址：广东省深圳市南山区深南大道10000号 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: philipzheng@tencent.com <br> 京ICP备08001421号京公网安备110108007702
+                地址：广东省深圳市南山区深南大道10000号 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: philipzheng@tencent.com <br> 京ICP备08001421号京公网安备110108007702
                 </p>
             </div>
         </div>
     </div>
     <!-- footer end -->
+    <script>
+        var flag = 0;
+        $.ajax({
+            url: "http://47.94.12.24:8000/settings/getinfo/",
+            type: "GET",
+            async:false,
+            success: function(resp){
+                console.log(resp);
+                if(resp.result === "success"){
+                    flag=1;
+                    $("#shopcar").text(resp.username).css("color","red").css("cursor","pointer").click(function(){
+                        alert("xxx");
+                    });
+                }
+                else{
+                    alert("NO");
+                }
+            }
+        });
+
+    </script>
 </body>
 
