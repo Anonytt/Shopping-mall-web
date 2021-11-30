@@ -765,20 +765,23 @@
     <script src="{% static 'mpjs/EasyLazyload.min.js' %}"></script>
     <script>
         $(function(){
+            var flag=0;
             $.ajax({
                 url: "http://47.94.12.24:8000/settings/getinfo/",
                 type: "GET",
+                async:false,
                 success: function(resp){
                     console.log(resp);
                     if(resp.result === "success"){
                         alert("恭喜您 登录成功！");
-
+                        flag=1;
                     }
                     else{
                         alert("NO");
                     }
                 }
             });
+            alert(flag);
         });
         lazyLoadInit({
             showTime: 1100,
