@@ -792,7 +792,16 @@
             });
 
             $("#font_line").click(function(){
-                self.location="http://47.94.12.24:8000/login";
+                $.ajax({
+                    url:"http://47.94.12.24:8000/settings/signout",
+                    type:"GET",
+                    success:function(resp){
+                        if(resp.result === "success"){
+                            alert("账号已退出");
+                            self.location="http://47.94.12.24:8000/login";
+                        }
+                    }
+                });
             });
         });
         lazyLoadInit({

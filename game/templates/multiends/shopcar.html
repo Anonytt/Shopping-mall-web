@@ -25,8 +25,8 @@
                 <ul>
                     <li>购物欢迎您！ </li>
                     <li id="shopcar">
-                        <a href="#">请登录</a>
-                        <a href="#" class="style-red">免费注册</a>
+                        <a href="http://47.94.12.24:8000/login" class="style-red">请登录</a>
+                        <a href="http://47.94.12.24:8000/register" class="style-red">免费注册</a>
                     </li>
                 </ul>
             </div>
@@ -303,6 +303,16 @@
         $(function(){
             if(flag === 1){
                 $("#font_exit").click(function(){
+                    $.ajax({
+                        url:"http://47.94.12.24:8000/settings/signout",
+                        type:"GET",
+                        success:function(resp){
+                            if(resp.result === "success"){
+                                alert("账号已退出");
+                                self.location="http://47.94.12.24:8000/login";
+                            }
+                        }
+                    });
                     self.location="http://47.94.12.24:8000/login";
                 });
             }
