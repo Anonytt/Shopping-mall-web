@@ -76,7 +76,7 @@
         </div>
         <div class="shopcar">
             <i class="car"> </i>
-                <a href="http://47.94.12.24:8000/shopcar/">我的购物车</a>
+                <a id="shopcar">我的购物车</a>
             <i class="arrow">  </i>
             <i class="count">80</i>
         </div>
@@ -765,7 +765,7 @@
     <script src="{% static 'mpjs/EasyLazyload.min.js' %}"></script>
     <script>
         $(function(){
-            var flag=0;
+            var flag = 0;
             $.ajax({
                 url: "http://47.94.12.24:8000/settings/getinfo/",
                 type: "GET",
@@ -781,7 +781,12 @@
                     }
                 }
             });
-            alert(flag);
+            $("#shopcar").click(function(){
+                if(flag === 1)
+                    self.location="http://47.94.12.24:8000/shopcar/";
+                else
+                    alert("WRONG");
+            });
         });
         lazyLoadInit({
             showTime: 1100,

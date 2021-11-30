@@ -60,3 +60,7 @@ body {
 .clearfix {
     *zoom: 1
 }
+
+#shopcar{
+    cursor: pointer;
+}
