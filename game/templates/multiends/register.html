@@ -13,7 +13,7 @@
         <!-- header -->
         <div class="header">
             <div class="logo">
-                    <img src="http://47.94.12.24:8000/static/image/log/nwu.jpg" alt="">
+                <img src="http://47.94.12.24:8000/static/image/log/nwu.jpg" alt="">
             </div>
         </div>
         <!-- registerarea -->
@@ -89,15 +89,36 @@
                         passsure:passsure,
                     },
                     success:function(resp){
-                        alert("YES");
                         if(resp.result === "success"){
                             self.location="http://47.94.12.24:8000/login";
                         }else{
-                            alert("WRONG!");
+                            alert("密码或用户名有误!");
                         }
                     }
-               });
-                //self.location="http://47.94.12.24:8000/login/";
+                });
+            });
+            $(document).keydown(function(event){
+                if(event.keyCode == 13){
+                    var username = $("#nc").val();
+                    var password = $("#pwd").val();
+                    var passsure = $("#surepwd").val();
+                    $.ajax({
+                        url:"http://47.94.12.24:8000/settings/reginto/",
+                        type:"GET",
+                        data:{
+                            username:username,
+                            password:password,
+                            passsure:passsure,
+                        },
+                        success:function(resp){
+                            if(resp.result === "success"){
+                                self.location="http://47.94.12.24:8000/login";
+                            }else{
+                                alert("密码或用户名有误!");
+                            }
+                        }
+                    });
+                }
             });
         });
     </script>

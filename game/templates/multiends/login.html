@@ -86,6 +86,30 @@
                     }
                 });
             });
+            $(document).keydown(function(event){
+                if(event.keyCode == 13){
+                    var username = $("#nc").val();
+                    var password = $("#pwd").val();
+                    let outer = this;
+                    $.ajax({
+                        url: "http://47.94.12.24:8000/settings/loginto/",
+                        type: "GET",
+                        data: {
+                            username: username,
+                            password: password,
+                        },
+                        success: function(resp){
+                            console.log(resp);
+                            if(resp.result === "success"){
+                                self.location="http://47.94.12.24:8000/mainpage";
+                            }
+                            else{
+                                alert("用户名或密码不正确");
+                            }
+                        }
+                    });
+                }
+            });
         });
     </script>
 </body>
