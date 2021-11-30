@@ -291,15 +291,22 @@
                 if(resp.result === "success"){
                     flag=1;
                     $("#shopcar").text(resp.username).css("color","red").css("cursor","pointer").click(function(){
-                        alert("xxx");
                     });
+                    var font_exit = $('<a id="font_exit"> 退出账号</a>');
+                    $("#shopcar").append(font_exit);
                 }
                 else{
                     alert("NO");
                 }
             }
         });
-
+        $(function(){
+            if(flag === 1){
+                $("#font_exit").click(function(){
+                    self.location="http://47.94.12.24:8000/login";
+                });
+            }
+        });
     </script>
 </body>
 

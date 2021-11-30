@@ -775,8 +775,9 @@
                     if(resp.result === "success"){
                         flag=1;
                         $("#fontline").text(resp.username).css("color","red").css("cursor","pointer").click(function(){
-                            alert("xxx");
                         });
+                        var font_line = $('<a id="font_line"> 退出账号</a>');
+                        $("#fontline").append(font_line);
                     }
                     else{
                         alert("NO");
@@ -787,7 +788,11 @@
                 if(flag === 1)
                     self.location="http://47.94.12.24:8000/shopcar/";
                 else
-                    alert("WRONG");
+                    alert("请您先登录账号");
+            });
+
+            $("#font_line").click(function(){
+                self.location="http://47.94.12.24:8000/login";
             });
         });
         lazyLoadInit({
