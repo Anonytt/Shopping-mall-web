@@ -773,8 +773,10 @@
                 success: function(resp){
                     console.log(resp);
                     if(resp.result === "success"){
-                        alert("恭喜您 登录成功！");
                         flag=1;
+                        $("#fontline").text(resp.username).css("color","red").css("cursor","pointer").click(function(){
+                            alert("xxx");
+                        });
                     }
                     else{
                         alert("NO");
