@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="{% static 'css/selfinfo_css/test.css' %}">
     <!-- 先引入jquery  -->
     <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        function F_Open_dialog() {
+            document.getElementById("btn_file").click();
+        }
+    </script>
 </head>
 
 <body>
@@ -78,7 +83,7 @@
                 </ul>       
                 <ul class="self-information-item-li txt">
                     <li>
-                        <textarea type="text" placeholder="ssss" maxlength="30"></textarea>
+                        <textarea type="text" placeholder="向大家分享一下你的心情吧！" maxlength="30">ssss</textarea>
                     </li>
                 </ul>               
                 <ul class="self-information-item-li but">
@@ -91,7 +96,8 @@
                 <li><b>头像:</b></li> 
                 <li><img src="https://img2.baidu.com/it/u=2161949891,656888789&fm=26&fmt=auto"></li>
                 <li><b>_________________________________</b></li>
-                <button>更换头像</button>
+                <input type="file" id="btn_file" style="display:none">
+                <button type="button" onclick="F_Open_dialog()">更换头像</button>
             </ul>                 
         </div>  
     </div>
