@@ -28,7 +28,6 @@
 
 .arrow-l,
 .arrow-r {
-    display: none;
     position: absolute;
     top: 50%;
     margin-top: -20px;
