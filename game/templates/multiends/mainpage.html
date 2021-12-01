@@ -778,9 +778,11 @@
                     console.log(resp);
                     if(resp.result === "success"){
                         flag=1;
-                        $("#fontline").text(resp.username).css("color","red").css("cursor","pointer").click(function(){
+                        $("#fontline").text("").css("color","red").css("cursor","pointer").click(function(){
                         });
                         var font_line = $('<a id="font_line"> 退出账号</a>');
+                        var selfinfo = $('<a id="selfinfo"></a>').text(resp.username).css("color","red").css("cursor","pointer");
+                        $("#fontline").append(selfinfo);
                         $("#fontline").append(font_line);
                     }
                     else{
@@ -788,6 +790,10 @@
                     }
                 }
             });
+            $("#selfinfo").click(function(){
+                self.location="http://47.94.12.24:8000/selfinfo";
+            });
+
             $("#shopcar").click(function(){
                 if(flag === 1)
                     self.location="http://47.94.12.24:8000/shopcar/";

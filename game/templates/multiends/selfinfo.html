@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/selfinfo_css/test.css' %}">
     <!-- 先引入jquery  -->
     <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'scjs/selfinfo/base.js'%}"></script>
     <script type="text/javascript">
         function F_Open_dialog() {
             document.getElementById("btn_file").click();
@@ -26,9 +27,9 @@
             <div class="fl">
                 <ul>
                     <li>购物欢迎您！ </li>
-                    <li>
-                        <a href="#">请登录</a>
-                        <a href="#" class="style-red">免费注册</a>
+                    <li id="shopcar">
+                        <a href="http://47.94.12.24:8000/login" class="style-red">请登录</a>
+                        <a href="http://47.94.12.24:8000/register" class="style-red">免费注册</a>
                     </li>
                 </ul>
             </div>
@@ -172,5 +173,8 @@
         </div>
     </div>
     <!-- footer end -->
+    <script>
+        var flag=1;
+    </script>
 </body>
 
