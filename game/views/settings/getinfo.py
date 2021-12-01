@@ -15,6 +15,6 @@ def getinfo(request):
             'username':player.user.username,
             'photo':player.photo,
             'price':player.price,
-            'sex':player.sex,
-            'love':player.love,
+            'qq':player.qq,
+            'sign':player.sign,
         })
