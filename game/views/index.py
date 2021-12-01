@@ -17,3 +17,6 @@ def mainpage(request):
 
 def shopcar(request):
     return render(request,"multiends/shopcar.html")
+
+def selfinfo(request):
+    return render(request,"multiends/selfinfo.html")
