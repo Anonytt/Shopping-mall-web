@@ -1,18 +1,19 @@
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meF-8">
+                       <title>Title</title>
+                       >
 
-<head>
-    <link rel="stylesheet" href="https://cdn.acwing.com/static/jquery-ui-dist/jquery-ui.min.css">
-    <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="{% static 'css/game.css' %}">
-    <script src="{% static 'js/dist/game.js' %}"></script>
-</head>   
+                       <form action="/upload/" mnctype="multipart/form-data">
+                                                  <p><input type="file" name="file"></p>
+                                                                           <p><input type="submit" value="提交"></p>
+                       </form>
+                       </body>
+</html>
 
-<body style="margin: 0">
-    <div id="ac_game_12345678"></div>
-    <script>
-        $(document).ready(function(){
-           let ac_game = new AcGame("ac_game_12345678");
-        });
-    </script>    
-</body>    
 
+<!-- form表单提交数据需要注意的事项 -->
+
+<!-单里面，input标签要有name -->
+<!-- 3 提交文件时需要设定form的enctype=“m附件只能通过submit方法进行提交 -->

@@ -13,11 +13,6 @@
     <!-- 先引入jquery  -->
     <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
     <script src="{% static 'scjs/selfinfo/base.js'%}"></script>
-    <script type="text/javascript">
-        function F_Open_dialog() {
-            document.getElementById("btn_file").click();
-        }
-    </script>
 </head>
 
 <body>
@@ -97,8 +92,13 @@
                 <li><b>头像:</b></li> 
                 <li><img src="https://img2.baidu.com/it/u=2161949891,656888789&fm=26&fmt=auto"></li>
                 <li><b>_________________________________</b></li>
-                <input type="file" id="btn_file" style="display:none">
-                <button type="button" onclick="F_Open_dialog()">更换头像</button>
+                <div class="upload">
+                    <form action="/to_upload" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="file" name="upload_file" accept="image/*">
+                        <input type="submit" value="更改头像">
+                    </form>
+                </div>
             </ul>                 
         </div>  
     </div>

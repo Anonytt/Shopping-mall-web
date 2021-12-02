@@ -1,5 +1,5 @@
 from django.urls import path,include
-from game.views.index import index,ano,register,login,mainpage,shopcar,selfinfo
+from game.views.index import index,ano,register,login,mainpage,shopcar,selfinfo,to_upload
 
 urlpatterns =[
     path("",index,name="index"),
@@ -9,6 +9,7 @@ urlpatterns =[
     path("login/",login,name="login"),
     path("shopcar/",shopcar,name="shopcar"),
     path("selfinfo/",selfinfo,name="selfinfo"),
+    path("to_upload",to_upload),
 
     path("menu/",include("game.urls.menu.index")),
     path("playground/",include("game.urls.playground.index")),

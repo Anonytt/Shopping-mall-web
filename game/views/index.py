@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import render,redirect
 
 def index(request):
     return render(request,"multiends/web.html")
@@ -20,3 +21,9 @@ def shopcar(request):
 
 def selfinfo(request):
     return render(request,"multiends/selfinfo.html")
+
+def to_upload(request):
+    rec_file = request.FILES.get('upload_file')
+    with open(f'game/media/{rec_file.name}','wb') as f:
+        f.write(rec_file.read())
+    return redirect('/selfinfo/')
