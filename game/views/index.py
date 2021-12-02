@@ -24,6 +24,6 @@ def selfinfo(request):
 
 def to_upload(request):
     rec_file = request.FILES.get('upload_file')
-    with open(f'game/media/{rec_file.name}','wb') as f:
+    with open(f'game/static/image/media/{rec_file.name}','wb') as f:
         f.write(rec_file.read())
     return redirect('/selfinfo/')
