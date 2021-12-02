@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
+from game.models.player.player import Player
 
 def index(request):
     return render(request,"multiends/web.html")
@@ -26,4 +27,8 @@ def to_upload(request):
     rec_file = request.FILES.get('upload_file')
     with open(f'game/static/image/media/{rec_file.name}','wb') as f:
         f.write(rec_file.read())
+    user = request.user
+    player = Player.objects.get(user=user)
+    player.photo = "http://47.94.12.24:8000/static/image/media/"+rec_file.name
+    player.save()
     return redirect('/selfinfo/')

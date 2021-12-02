@@ -1,4 +1,5 @@
 $(function(){
+    var photo = "";
     $.ajax({
         url:"http://47.94.12.24:8000/settings/getinfo/",
         type:"GET",
@@ -14,6 +15,8 @@ $(function(){
                 $("#QQ").text(resp.qq);
                 $("#yue").text(resp.price);
                 $("#sign").text(resp.sign);
+                photo = resp.photo;
+                $("#touxiang").attr('src',photo);
             }
         }
     });
@@ -47,9 +50,6 @@ $(function(){
                         }
                     }
                 });
-            });
-            $("#btn_button").click(function(){
-                //TODO
             });
          }
      });
