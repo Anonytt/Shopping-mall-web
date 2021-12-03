@@ -13,6 +13,8 @@ def buy(request):
         if(player.price >= goods.price):
             player.price -= goods.price
             player.save()
+            goods.belong = player.user.username
+            goods.save()
             return JsonResponse({
                 'result':'success',
             })
