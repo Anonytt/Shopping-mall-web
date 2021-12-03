@@ -11,8 +11,6 @@ def buy(request):
         goods = Goods.objects.get(webname=webname)
         player = Player.objects.get(user=user)
         if(player.price >= goods.price):
-            player.price -= goods.price
-            player.save()
             goods.belong = player.user.username
             goods.save()
             return JsonResponse({

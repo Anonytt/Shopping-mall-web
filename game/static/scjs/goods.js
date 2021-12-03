@@ -26,7 +26,7 @@ $(function(){
                 },
                 success:function(resp){
                     if(resp.result === "success"){
-                        alert("恭喜您，购物成功！");
+                        alert("商品已加入购物车！");
                     }else{
                         alert("抱歉,您的余额不足！");
                     }

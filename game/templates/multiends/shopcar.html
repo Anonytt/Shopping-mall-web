@@ -14,6 +14,7 @@
     <!-- 先引入jquery  -->
     <script src="{% static 'scjs/jquery.min.js' %}"></script>
     <!-- 在引入我们自己的js文件 -->
+    <script src="{% static 'scjs/du.js' %}"></script>
     <script src="{% static 'scjs/car.js' %}"></script>
 </head>
 
@@ -83,7 +84,7 @@
                     <div class="t-action">操作</div>
                 </div>
                 <!-- 商品详细模块 -->
-                <div class="cart-item-list">
+                <div class="cart-item-list" id="miao">
                     <div class="cart-item check-cart-item">
                         <div class="p-checkbox">
                             <input type="checkbox" name="" id="" checked class="j-checkbox">
