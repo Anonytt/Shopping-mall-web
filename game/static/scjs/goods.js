@@ -16,4 +16,20 @@ $(function(){
             }
         }
     });
+    if(fg === 1){
+        $("#btn").click(function(){
+            $.ajax({
+                url:"http://47.94.12.24:8000/settings/buy",
+                type:"GET",
+                data:{
+                    num:num,
+                },
+                success:function(resp){
+                    if(resp.result === "success"){
+                        alert("QQ");
+                    }
+                }
+            });
+        });
+    }
 })

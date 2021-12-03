@@ -8,6 +8,7 @@ $(function(){
                 console.log(resp);
                 if(resp.result === "success"){
                     flag=1;
+                    fg=1;
                     $("#shopcar").text("").css("color","red").css("cursor","pointer").click(function(){
                     });
                     var font_exit = $('<a id="font_exit"> 退出账号</a>');
