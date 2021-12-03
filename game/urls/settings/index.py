@@ -4,6 +4,7 @@ from game.views.settings.loginto import loginto
 from game.views.settings.reginto import reginto
 from game.views.settings.signout import signout
 from game.views.settings.changeself import changeself
+from game.views.settings.goods import goods
 
 urlpatterns = [
     path("getinfo/",getinfo,name="settings_getinfo"),
@@ -11,4 +12,5 @@ urlpatterns = [
     path("reginto/",reginto,name="settings_reginto"),
     path("signout/",signout,name="settings_signout"),
     path("changeself/",changeself,name="settings_changeself"),
+    path("goods/",goods,name="settings_goods"),
 ]
