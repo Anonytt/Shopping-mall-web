@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/selfinfo_css/commodity.css' %}">
     <!-- 先引入jquery  -->
     <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'scjs/getinfo.js' %}"></script>
 </head>
 
 <body>
@@ -20,9 +21,9 @@
             <div class="fl">
                 <ul>
                     <li>购物欢迎您！ </li>
-                    <li>
-                        <a href="#">请登录</a>
-                        <a href="#" class="style-red">免费注册</a>
+                    <li id="shopcar">
+                        <a href="http://47.94.12.24:8000/login" class="style-red">请登录</a>
+                        <a href="http://47.94.12.24:8000/register" class="style-red">免费注册</a>
                     </li>
                 </ul>
             </div>
