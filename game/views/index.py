@@ -23,6 +23,18 @@ def shopcar(request):
 def selfinfo(request):
     return render(request,"multiends/selfinfo.html")
 
+def commodity0(request):
+    return render(request,"multiends/commodity0.html")
+
+def commodity1(request):
+    return render(request,"multiends/commodity1.html")
+
+def commodity2(request):
+    return render(request,"multiends/commodity2.html")
+
+def commodity3(request):
+    return render(request,"multiends/commodity3.html")
+
 def to_upload(request):
     rec_file = request.FILES.get('upload_file')
     with open(f'game/static/image/media/{rec_file.name}','wb') as f:
