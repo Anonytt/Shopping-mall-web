@@ -12,7 +12,6 @@
     <!-- 先引入jquery  -->
     <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
     <script src="{% static 'scjs/getinfo.js' %}"></script>
-    <script src="{% static 'scjs/goods.js' %}"></script>
 </head>
 
 <body>
@@ -61,30 +60,26 @@
     <!-- NEW -->
     <div class="model-new">
         <div class="commodity-figure">
-            <img src="http://47.94.12.24:8000/static/image/mpimage/upload/focus3.jpg">
+            <img src="http://47.94.12.24:8000/static/image/mpimage/upload/focus.jpg">
             <div class="commodity_bottom_line">__________________________________________________________________________</div>
         </div>
         <div class="commodity-describe">
-            <ul class="commodity-describe-item num">
-                <li><b>商品编号：</b></li>
-                <li id="num">3</li>
-            </ul>
             <ul class="commodity-describe-item name">
                 <li><b>商品名称：</b></li>
-                <li id="name">NULL</li>
+                <li>NULL</li>
             </ul>
             <ul class="commodity-describe-item price">
                 <li><b>商品价格：</b></li>
-                <li id="price">NULL</li>
+                <li>NULL</li>
             </ul>
             <ul class="commodity-describe-item source">
                 <li><b>商品发货地：</b></li>
-                <li id="source">NULL</li>
+                <li>NULL</li>
             </ul>
             <ul class="commodity-describe-item intro">
                 <div class="commodity-describe-item-intro">
                 <li><b>商品介绍：</b></li>
-                <li id="describe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit corporis inventore ut, odio ipsa ab ducimus architecto at nulla velit qui quod quasi? Deserunt cum quam facilis? Iure, vero!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit corporis inventore ut, odio ipsa ab ducimus architecto at nulla velit qui quod quasi? Deserunt cum quam facilis? Iure, vero!</li>
                 </div>
             </ul>           
             <ul class="commodity-describe-item source">
@@ -145,7 +140,7 @@
                 <dl class="mod_help_item mod_help_app">
                     <dt>帮助中心</dt>
                     <dd>
-                        <img src="http://47.94.12.24:8000/static/image/scimage/upload/erweima.png" alt="">
+                        <img src="upload/erweima.png" alt="">
                         <p>购物客户端</p>
                     </dd>
                 </dl>
@@ -163,5 +158,7 @@
         </div>
     </div>
     <!-- footer end -->
+    <script>
+    </script>
 </body>
 

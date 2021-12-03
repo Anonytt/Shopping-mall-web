@@ -12,6 +12,7 @@
     <!-- 先引入jquery  -->
     <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
     <script src="{% static 'scjs/getinfo.js' %}"></script>
+    <script src="{% static 'scjs/goods.js' %}"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 <ul>
                     <li>购物欢迎您！ </li>
                     <li id="shopcar">
-                        <a href="http://47.94.12.24:8000/login">请登录</a>
+                        <a href="http://47.94.12.24:8000/login" class="style-red">请登录</a>
                         <a href="http://47.94.12.24:8000/register" class="style-red">免费注册</a>
                     </li>
                 </ul>
@@ -64,22 +65,26 @@
             <div class="commodity_bottom_line">__________________________________________________________________________</div>
         </div>
         <div class="commodity-describe">
+            <ul class="commodity-describe-item num">
+                <li><b>商品编号：</b></li>
+                <li id="num">2</li>
+            </ul>
             <ul class="commodity-describe-item name">
                 <li><b>商品名称：</b></li>
-                <li>NULL</li>
+                <li id="name">NULL</li>
             </ul>
             <ul class="commodity-describe-item price">
                 <li><b>商品价格：</b></li>
-                <li>NULL</li>
+                <li id="price">NULL</li>
             </ul>
             <ul class="commodity-describe-item source">
                 <li><b>商品发货地：</b></li>
-                <li>NULL</li>
+                <li id="source">NULL</li>
             </ul>
             <ul class="commodity-describe-item intro">
                 <div class="commodity-describe-item-intro">
                 <li><b>商品介绍：</b></li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit corporis inventore ut, odio ipsa ab ducimus architecto at nulla velit qui quod quasi? Deserunt cum quam facilis? Iure, vero!</li>
+                <li id="describe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit corporis inventore ut, odio ipsa ab ducimus architecto at nulla velit qui quod quasi? Deserunt cum quam facilis? Iure, vero!</li>
                 </div>
             </ul>           
             <ul class="commodity-describe-item source">
@@ -140,7 +145,7 @@
                 <dl class="mod_help_item mod_help_app">
                     <dt>帮助中心</dt>
                     <dd>
-                        <img src="upload/erweima.png" alt="">
+                        <img src="http://47.94.12.24:8000/static/image/scimage/upload/erweima.png" alt="">
                         <p>购物客户端</p>
                     </dd>
                 </dl>
