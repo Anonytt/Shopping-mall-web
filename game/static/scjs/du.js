@@ -170,8 +170,16 @@ $(function(){
                 $.ajax({
                     url:"http://47.94.12.24:8000/settings/jiesuan",
                     type:"GET",
+                    data:{
+                        sum:sum,
+                    },
                     success:function(resp){
-                        alert("qq");
+                        if(resp.result === 'success'){
+                            alert("QQ");
+                        }
+                        else{
+                            alert("NONONO");
+                        }
                     }
                 })
             })
