@@ -163,4 +163,16 @@ $(function(){
             $(".clear-all").click(function() {
                 $(".cart-item").remove();
                 getSum();
-            });});
+            });
+            
+            $("#jiesuan").click(function(){
+                var sum = $("#zongjia").text();
+                $.ajax({
+                    url:"http://47.94.12.24:8000/settings/jiesuan",
+                    type:"GET",
+                    success:function(resp){
+                        alert("qq");
+                    }
+                })
+            })
+});
