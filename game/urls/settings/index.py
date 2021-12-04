@@ -9,6 +9,7 @@ from game.views.settings.buy import buy
 from game.views.settings.du import du
 from game.views.settings.dele import dele
 from game.views.settings.jiesuan import jiesuan
+from game.views.settings.search import search
 
 urlpatterns = [
     path("getinfo/",getinfo,name="settings_getinfo"),
@@ -21,4 +22,5 @@ urlpatterns = [
     path("du/",du,name="settings_du"),
     path("dele/",dele,name="settings_dele"),
     path("jiesuan/",jiesuan,name="settings_jiesuan"),
+    path("search/",search,name="settings_search"),
 ]
