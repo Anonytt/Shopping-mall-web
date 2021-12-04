@@ -7,6 +7,7 @@ from game.views.settings.changeself import changeself
 from game.views.settings.goods import goods
 from game.views.settings.buy import buy
 from game.views.settings.du import du
+from game.views.settings.dele import dele
 
 urlpatterns = [
     path("getinfo/",getinfo,name="settings_getinfo"),
@@ -17,4 +18,5 @@ urlpatterns = [
     path("goods/",goods,name="settings_goods"),
     path("buy/",buy,name="settings_buy"),
     path("du/",du,name="settings_du"),
+    path("dele/",dele,name="settings_dele"),
 ]

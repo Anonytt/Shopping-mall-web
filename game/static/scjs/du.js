@@ -1,16 +1,19 @@
 $(function(){
+    var quan = 0;
     $.ajax({
         url:"http://47.94.12.24:8000/settings/du",
         type:"GET",
         async:false,
         success:function(resp){
+            quan = 1;
             console.log(resp.rows[0].name);
             for(var i=0;i<resp.tot;i++){
                 var idd = i;
                 var idq = i;
                 var idx = i;
                 var pt = i;
-                var arr =$('<div class="cart-item"><div class="p-checkbox"><input type="checkbox" name="" id="" class="j-checkbox"></div><div class="p-goods"><div class="p-img"><img src="" alt="" id=pt></div><div class="p-msg" id=idd>【2000张贴纸】贴纸书 3-6岁 贴画儿童 贴画书全套12册 贴画 贴纸儿童 汽</div></div><div class="p-price" id=idq>￥24.80</div><div class="p-num"><div class="quantity-form"><a href="javascript:;" class="decrement">-</a><input type="text" class="itxt" value="1"><a href="javascript:;" class="increment">+</a></div></div><div class="p-sum" id=idx>￥24.80</div><div class="p-action"><a href="javascript:;">删除</a></div></div>');
+                var del = i;
+                var arr =$('<div class="cart-item"><div class="p-checkbox"><input type="checkbox" name="" id="" class="j-checkbox"></div><div class="p-goods"><div class="p-img"><img src="" alt="" id=pt></div><div class="p-msg" id=idd>【2000张贴纸】贴纸书 3-6岁 贴画儿童 贴画书全套12册 贴画 贴纸儿童 汽</div></div><div class="p-price" id=idq>￥24.80</div><div class="p-num"><div class="quantity-form"><a href="javascript:;" class="decrement">-</a><input type="text" class="itxt" value="1"><a href="javascript:;" class="increment">+</a></div></div><div class="p-sum" id=idx>￥24.80</div><div class="p-action"><a href="javascript:;" id=del>删除</a></div></div>');
                 $("#miao").append(arr);
                 $("#idd").text(resp.rows[i].name);
                 $("#idd").attr("id","pmsg"+i);
@@ -18,6 +21,7 @@ $(function(){
                 $("#idq").attr("id","idq"+i);
                 $("#idx").text("￥"+resp.rows[i].price);
                 $("#idx").attr("id","idx"+i);
+                $("#del").attr("id",i);
                 if(resp.rows[i].id != 4){
                     $("#pt").attr("id","pt"+i).attr("src","http://47.94.12.24:8000/static/image/mpimage/upload/focus"+resp.rows[i].id+".jpg").css("width","83px").css("height","83px");
                 }
@@ -129,8 +133,25 @@ $(function(){
             // (1) 商品后面的删除按钮
             $(".p-action a").click(function() {
                 // 删除的是当前的商品 
+                //$(this).parents(".cart-item").remove();
+                //getSum();
+                var qwq = $(this).attr('id');
+                var selector = "#pmsg"+qwq;
+                //alert($(selector).text());
+                var name = $(selector).text();
+                $.ajax({
+                    url:"http://47.94.12.24:8000/settings/dele",
+                    type:"GET",
+                    data:{
+                        name:name,
+                    },
+                    success:function(resp){
+                        alert("产品:"+name+" 已从您的购物车中清除");
+                    }
+                });
                 $(this).parents(".cart-item").remove();
                 getSum();
+
             });
             // (2) 删除选中的商品
             $(".remove-batch").click(function() {
