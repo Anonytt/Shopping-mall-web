@@ -26,7 +26,7 @@ def reginto(request):
     user = User(username=username)
     user.set_password(password)
     user.save()
-    Player.objects.create(user=user, photo="https://img2.baidu.com/it/u=2161949891,656888789&fm=26&fmt=auto",price=0)
+    Player.objects.create(user=user, photo="https://img2.baidu.com/it/u=2161949891,656888789&fm=26&fmt=auto",price=10000)
     login(request, user)
     return JsonResponse({
         'result': "success",
