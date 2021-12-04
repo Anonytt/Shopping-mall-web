@@ -37,4 +37,12 @@ $(function () {
             });
         }
     });
+    
+    $.ajax({
+        url:"http://47.94.12.24:8000/settings/count",
+        type:"GET",
+        success:function(resp){
+            $(".count").text(resp.tot);
+        }
+    })
 })

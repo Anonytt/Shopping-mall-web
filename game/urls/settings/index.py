@@ -10,6 +10,7 @@ from game.views.settings.du import du
 from game.views.settings.dele import dele
 from game.views.settings.jiesuan import jiesuan
 from game.views.settings.search import search
+from game.views.settings.count import count
 
 urlpatterns = [
     path("getinfo/",getinfo,name="settings_getinfo"),
@@ -23,4 +24,5 @@ urlpatterns = [
     path("dele/",dele,name="settings_dele"),
     path("jiesuan/",jiesuan,name="settings_jiesuan"),
     path("search/",search,name="settings_search"),
+    path("count/",count,name="settings_count"),
 ]
