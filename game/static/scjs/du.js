@@ -8,12 +8,22 @@ $(function(){
             for(var i=0;i<resp.tot;i++){
                 var idd = i;
                 var idq = i;
-                var arr =$('<div class="cart-item"><div class="p-checkbox"><input type="checkbox" name="" id="" class="j-checkbox"></div><div class="p-goods"><div class="p-img"><img src="" alt=""></div><div class="p-msg" id=idd>【2000张贴纸】贴纸书 3-6岁 贴画儿童 贴画书全套12册 贴画 贴纸儿童 汽</div></div><div class="p-price" id=idq>￥24.80</div><div class="p-num"><div class="quantity-form"><a href="javascript:;" class="decrement">-</a><input type="text" class="itxt" value="1"><a href="javascript:;" class="increment">+</a></div></div><div class="p-sum">￥24.80</div><div class="p-action"><a href="javascript:;">删除</a></div></div>');
+                var idx = i;
+                var pt = i;
+                var arr =$('<div class="cart-item"><div class="p-checkbox"><input type="checkbox" name="" id="" class="j-checkbox"></div><div class="p-goods"><div class="p-img"><img src="" alt="" id=pt></div><div class="p-msg" id=idd>【2000张贴纸】贴纸书 3-6岁 贴画儿童 贴画书全套12册 贴画 贴纸儿童 汽</div></div><div class="p-price" id=idq>￥24.80</div><div class="p-num"><div class="quantity-form"><a href="javascript:;" class="decrement">-</a><input type="text" class="itxt" value="1"><a href="javascript:;" class="increment">+</a></div></div><div class="p-sum" id=idx>￥24.80</div><div class="p-action"><a href="javascript:;">删除</a></div></div>');
                 $("#miao").append(arr);
                 $("#idd").text(resp.rows[i].name);
                 $("#idd").attr("id","pmsg"+i);
                 $("#idq").text("￥"+resp.rows[i].price);
                 $("#idq").attr("id","idq"+i);
+                $("#idx").text("￥"+resp.rows[i].price);
+                $("#idx").attr("id","idx"+i);
+                if(resp.rows[i].id != 4){
+                    $("#pt").attr("id","pt"+i).attr("src","http://47.94.12.24:8000/static/image/mpimage/upload/focus"+resp.rows[i].id+".jpg").css("width","83px").css("height","83px");
+                }
+                else{
+                    $("#pt").attr("id","pt"+i).attr("src","http://47.94.12.24:8000/static/image/mpimage/upload/focus.jpg").css("width","83px").css("height","83px");
+                }    
             }
         }
     });

@@ -11,5 +11,5 @@ def du(request):
     return JsonResponse({
         'result':'success',
         'tot':tot,
-        'rows':list(Goods.objects.filter(belong=name).values('name','price')),
+        'rows':list(Goods.objects.filter(belong=name).values('name','price','id')),
     })
