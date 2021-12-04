@@ -175,10 +175,11 @@ $(function(){
                     },
                     success:function(resp){
                         if(resp.result === 'success'){
-                            alert("QQ");
+                            alert("恭喜您，购买成功！");
+                            self.location="http://47.94.12.24:8000/shopcar";
                         }
                         else{
-                            alert("NONONO");
+                            alert("您的余额不足！");
                         }
                     }
                 })
