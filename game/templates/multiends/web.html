@@ -16,7 +16,7 @@
         <input type="button" value="关闭连接" onclick="closeConn()">
     </div>
     <script>
-        socket = new WebSocket("ws://47.94.12.24:8000/room/{{ qq_group_num }}/");
+        socket = new WebSocket("ws://47.94.12.24:8000/room/{{ qq }}/");
 
         socket.onopen = function(event){
             let tag = document.createElement("div");
