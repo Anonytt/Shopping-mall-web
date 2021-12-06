@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-            <meF-8">
-                       <title>Title</title>
-                       >
+<head>
+    <style>
+        .message{
+            height: 300px;
+            border: 1px solid #dddddd;
+            width: 100%;
+        }
+    </style>
+</head>
 
-                       <form action="/upload/" mnctype="multipart/form-data">
-                                                  <p><input type="file" name="file"></p>
-                                                                           <p><input type="submit" value="提交"></p>
-                       </form>
-                       </body>
-</html>
-
-
-<!-- form表单提交数据需要注意的事项 -->
-
-<!-单里面，input标签要有name -->
-<!-- 3 提交文件时需要设定form的enctype=“m附件只能通过submit方法进行提交 -->
+<body>
+    <div class="message" id="message"></div>
+    <div>
+        <input type="text" placeholder="请输入" id="txt">
+        <input type="button" value="发送">
+    </div>
+    <script>
+        socket = new WebSocket("ws://47.94.12.24:8000/room/123/");
+    </script>
+</body>

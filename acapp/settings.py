@@ -32,7 +32,8 @@ ALLOWED_HOSTS = ["47.94.12.24"]
 # Application definition
 
 INSTALLED_APPS = [
-    'game.apps.GameConfig',    
+    'channels',
+    'game.apps.GameConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -129,3 +130,6 @@ MEDIA_URL='/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+ASGI_APPLICATION = "acapp.asgi.application"
