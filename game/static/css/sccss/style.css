@@ -51,3 +51,31 @@
     height:440px;
 }
 
+.information{
+    border-style: solid;
+    margin:0%;
+    cursor:pointer;
+}
+.information>li{
+    display:inline;
+}
+.information>li>img{
+    position:relative;
+    margin:0%;
+    top:2px;
+    left:-20px;
+    width:30px;
+    padding-top:0px;
+}
+.con{
+    position: relative;
+    top:-7px;
+    left:10px;
+}
+.wechat-head>ul>li{
+    display: inline;
+    position: relative;
+    left:450px;
+    top:-10px;
+    font-size: 180%;
+}
