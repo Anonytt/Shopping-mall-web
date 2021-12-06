@@ -3,7 +3,8 @@ from django.shortcuts import render,redirect
 from game.models.player.player import Player
 
 def index(request):
-    return render(request,"multiends/web.html")
+    qq_group_num = request.GET.get('num')
+    return render(request,"multiends/web.html",{"qq_group_num":qq_group_num})
 
 def ano(request):
     return render(request,"multiends/ano.html")
