@@ -7,8 +7,13 @@ class ChatConsumer(WebsocketConsumer):
         self.accept()
 
     def websocket_receive(self,message):
-        print(message)
-        self.send("不要回复不要回复")
+        print("接收到消息： ",message['text'])
+        text = message['text']
+        if text == "关闭":
+            self.close()
+            return
+        res="{}SB".format(text)
+        self.send(res)
 
     def websocket_disconnect(self,message):
         print("断开连接")
