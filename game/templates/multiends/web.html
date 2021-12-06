@@ -16,6 +16,8 @@
             <input type="button" value="发送(S)" onclick="sendMessage()">
             <input type="button" value="关闭连接" onclick="closeConn()">
         </div>
+        <div class="wechat-people">
+        </div>
     </div>
     <script>
         socket = new WebSocket("ws://47.94.12.24:8000/room/{{ qq }}/");

@@ -1,15 +1,14 @@
 .wechat{
     position: relative;
     border-style: solid;
-    border-color: red;
     height: 87vh;
     width: 66vw;
     left:20vw;
     top:5vh;
+    background-color:rgb(245,245,245);
 }
 .wechat-head{
     border-style:solid;
-    border-color:purple;
     height:9vh;
     width:65.7vw;
     position: fixed;
@@ -18,7 +17,6 @@
     position: relative;
     left:291px;
     border-style: solid;
-    border-color: green;
     height: 52vh;
     width: 43vw;
     top:9.5vh;
@@ -35,10 +33,21 @@
 .wechat-input>textarea{
     width:43vw;
     height:18vh;
+    background-color:rgb(245,245,245);
 }
 .wechat-input>input{
     position: relative;
     left:32vw;
     top:2vh;
+}
+
+.wechat-people{
+    border-style: solid;
+    border-color:yellow;
+    position:fixed;
+    left:21vw;
+    top:16.7vh;
+    width:285px;
+    height:440px;
 }
 
