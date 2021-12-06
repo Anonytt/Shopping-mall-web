@@ -1,0 +1,44 @@
+.wechat{
+    position: relative;
+    border-style: solid;
+    border-color: red;
+    height: 87vh;
+    width: 66vw;
+    left:20vw;
+    top:5vh;
+}
+.wechat-head{
+    border-style:solid;
+    border-color:purple;
+    height:9vh;
+    width:65.7vw;
+    position: fixed;
+}
+.wechat-demo{
+    position: relative;
+    left:291px;
+    border-style: solid;
+    border-color: green;
+    height: 52vh;
+    width: 43vw;
+    top:9.5vh;
+}
+.wechat-input{
+    position: relative;
+    left:291px;
+    border-style: solid;
+    border-color: black;
+    top:9vh;
+    height: 25vh;
+    width: 43vw;
+}
+.wechat-input>textarea{
+    width:43vw;
+    height:18vh;
+}
+.wechat-input>input{
+    position: relative;
+    left:32vw;
+    top:2vh;
+}
+

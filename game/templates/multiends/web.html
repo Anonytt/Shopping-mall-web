@@ -1,19 +1,21 @@
+{% load static %}
 <head>
-    <style>
-        .message{
-            height: 300px;
-            border: 1px solid #dddddd;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/sccss/style.css' %}">
+    <script src="{% static 'scjs/jquery.min.js' %}"></script>
 </head>
 
 <body>
-    <div class="message" id="message"></div>
-    <div>
-        <input type="text" placeholder="请输入" id="txt">
-        <input type="button" value="发送" onclick="sendMessage()">
-        <input type="button" value="关闭连接" onclick="closeConn()">
+    <div class="wechat">
+        <div class="wechat-head">
+        </div>
+        <div class="wechat-demo" id="message">
+
+        </div>
+        <div class="wechat-input">
+            <textarea id="txt" type="text" placeholder="请输入..." maxlength="30"></textarea>
+            <input type="button" value="发送(S)" onclick="sendMessage()">
+            <input type="button" value="关闭连接" onclick="closeConn()">
+        </div>
     </div>
     <script>
         socket = new WebSocket("ws://47.94.12.24:8000/room/{{ qq }}/");
@@ -43,5 +45,5 @@
         function closeConn(){
             socket.close();
         }
-    </script>
+    </script> </script>
 </body>
