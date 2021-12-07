@@ -65,6 +65,13 @@
             $("#"+idd).text(a);
             $("#ft0").attr('src',b1);
             $("#ft"+idd[2]).attr('src',a1);
+            var ThisURL = "http://47.94.12.24:8000/?qq="+name;
+            var state = {
+                title: document.title,
+                url: document.location.href,
+                otherkey: null
+            };
+            history.replaceState(state,document.title,ThisURL);
         }
     </script>
 </body>
