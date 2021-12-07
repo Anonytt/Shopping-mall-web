@@ -57,6 +57,14 @@
         function func(idd){
             var name = document.getElementById(idd).innerText;
             $(".wechat-head>ul>li").text(name);
+            var a = $("#nm0").text();
+            var a1= $("#ft0").attr('src');
+            var b = $("#"+idd).text();
+            var b1= $("#ft"+idd[2]).attr('src');
+            $("#nm0").text(b);
+            $("#"+idd).text(a);
+            $("#ft0").attr('src',b1);
+            $("#ft"+idd[2]).attr('src',a1);
         }
     </script>
 </body>
