@@ -43,12 +43,12 @@
 
 .wechat-people{
     border-style: solid;
-    border-color:yellow;
+    border-color:grey;
     position:fixed;
-    left:21vw;
-    top:16.7vh;
-    width:285px;
-    height:440px;
+    left:20.7vw;
+    top:16.4vh;
+    width:290px;
+    height:443px;
 }
 
 .information{
@@ -78,4 +78,8 @@
     left:450px;
     top:-10px;
     font-size: 180%;
+}
+
+#shopcar{
+    position:fixed;
 }

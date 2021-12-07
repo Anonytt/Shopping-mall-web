@@ -11,6 +11,7 @@ from game.views.settings.dele import dele
 from game.views.settings.jiesuan import jiesuan
 from game.views.settings.search import search
 from game.views.settings.count import count
+from game.views.settings.chat import chat
 
 urlpatterns = [
     path("getinfo/",getinfo,name="settings_getinfo"),
@@ -25,4 +26,5 @@ urlpatterns = [
     path("jiesuan/",jiesuan,name="settings_jiesuan"),
     path("search/",search,name="settings_search"),
     path("count/",count,name="settings_count"),
+    path("chat/",chat,name="settings_chat"),
 ]

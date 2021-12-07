@@ -2,9 +2,13 @@
 <head>
     <link rel="stylesheet" href="{% static 'css/sccss/style.css' %}">
     <script src="{% static 'scjs/jquery.min.js' %}"></script>
+    <script src="{% static 'scjs/getinfo.js' %}"></script>
+    <script src="{% static 'scjs/chat.js' %}"></script>
 </head>
 
 <body>
+    <div id="shopcar">
+    </div>
     <div class="wechat">
         <div class="wechat-head">
             <ul><li>Anonytt</li></ul>
@@ -18,18 +22,6 @@
             <input type="button" value="关闭连接" onclick="closeConn()">
         </div>
         <div class="wechat-people">
-            <div><ul class="information">
-                <li><img src="load.jpg"></li>
-                <li class="con">Anonytt</li>
-                <ul></div>
-            <div><ul class="information">
-                <li><img src="load.jpg"></li>
-                <li class="con">Curry</li>
-            <ul></div>
-            <div><ul class="information">
-                <li><img src="load.jpg"></li>
-                <li class="con">Leborn</li>
-            <ul></div>
         </div>
     </div>
     <script>
@@ -51,6 +43,7 @@
             let tag = document.createElement("div");
             tag.innerText = "[断开连接]";
             document.getElementById("message").appendChild(tag);
+            self.location="http://47.94.12.24:8000/mainpage";
         }
         function sendMessage(){
             let tag = document.getElementById("txt");
