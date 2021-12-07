@@ -1,5 +1,6 @@
 $(function(){
     var username = "";
+    var tot = 0;
     $.ajax({
         url:"http://47.94.12.24:8000/settings/getinfo",
         type:"GET",
@@ -21,11 +22,13 @@ $(function(){
             if(resp.result === "success"){
                 console.log(resp.lst);
                 length = resp.length;
+                tot = length;
                 lst = resp.lst;
                 for(var i=0;i<length;i++){
                     var idnm = i;
                     var idft = i;
-                    var arr = $('<div><ul class="information"><li><img src="load.jpg" id=idft></li><li class="con" id=idnm>Anonytt</li><ul></div>');
+                    var tx = lst[i]['name'];
+                    var arr = $('<div><ul class="information"><li><img src="load.jpg" id=idft></li><li class="con" id=idnm onclick="func(id)">Anonytt</li><ul></div>');
                     $(".wechat-people").append(arr);
                     $("#idnm").text(lst[i]['name']);
                     $("#idnm").attr('id',"nm"+i);

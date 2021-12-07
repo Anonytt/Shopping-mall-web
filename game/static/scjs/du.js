@@ -27,7 +27,7 @@ $(function(){
                 }
                 else{
                     $("#pt").attr("id","pt"+i).attr("src","http://47.94.12.24:8000/static/image/mpimage/upload/focus.jpg").css("width","83px").css("height","83px");
-                }    
+                }
             }
         }
     });

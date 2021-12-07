@@ -11,7 +11,7 @@
     </div>
     <div class="wechat">
         <div class="wechat-head">
-            <ul><li>Anonytt</li></ul>
+            <ul><li></li></ul>
         </div>
         <div class="wechat-demo" id="message">
 
@@ -53,5 +53,10 @@
         function closeConn(){
             socket.close();
         }
-    </script> </script>
+
+        function func(idd){
+            var name = document.getElementById(idd).innerText;
+            $(".wechat-head>ul>li").text(name);
+        }
+    </script>
 </body>
