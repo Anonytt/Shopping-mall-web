@@ -20,6 +20,7 @@
     height: 52vh;
     width: 43vw;
     top:9.5vh;
+    overflow:auto;
 }
 .wechat-input{
     position: relative;
